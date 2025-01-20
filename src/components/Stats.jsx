@@ -1,4 +1,4 @@
-import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from "./constants";
+import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from "../lib/constants";
 
 export default function Stats({ numberOfWords = 0, numberOfCharacters = 0 }) {
   return (
