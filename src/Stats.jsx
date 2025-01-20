@@ -13,8 +13,7 @@ function Stat({ number, label }) {
   return (
     <section className="stat">
       <span
-        className="stat__number"
-        style={{ color: number < 0 ? "red" : "inherit" }}
+        className={`stat__number ${number < 0 ? "stat__number--limit" : ""}`}
       >
         {number}
       </span>
