@@ -1,10 +1,18 @@
+import { FACEBOOK_MAX_CHARACTERS, INSTAGRAM_MAX_CHARACTERS } from "./constants";
+
 export default function Stats({ numberOfWords = 0, numberOfCharacters = 0 }) {
   return (
     <section className="stats">
       <Stat number={numberOfWords} label={"Words"} />
       <Stat number={numberOfCharacters} label={"Characters"} />
-      <Stat number={280 - numberOfCharacters} label={"Instagram"} />
-      <Stat number={2200 - numberOfCharacters} label={"Facebook"} />
+      <Stat
+        number={INSTAGRAM_MAX_CHARACTERS - numberOfCharacters}
+        label={"Instagram"}
+      />
+      <Stat
+        number={FACEBOOK_MAX_CHARACTERS - numberOfCharacters}
+        label={"Facebook"}
+      />
     </section>
   );
 }
