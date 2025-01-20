@@ -14,6 +14,11 @@ export default function TextArea() {
       setWarningText("Scripts are not allowed!");
 
       newText = newText.replace("<script>", "");
+    } else if (newText.includes("@")) {
+      setShowWarning(true);
+      setWarningText("@ are not allowed!");
+
+      newText = newText.replace("@", "");
     }
 
     setText(newText);
